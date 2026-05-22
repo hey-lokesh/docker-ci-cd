@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,4 +25,10 @@ jobs:
         run: npm run build
 
       - name: Build Docker Image
-        run: docker build -t docker-react-app .
+        run: docker build -t lokesh0125/sre-react-app:latest .
+
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Push Docker Image
+        run: docker push lokesh0125/sre-react-app:latest
