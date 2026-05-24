@@ -10,6 +10,9 @@ function App() {
   return (
     <>
       <section id="center">
+        <div>
+          <h1>this heading is added for version 2</h1>
+        </div>
 
         <div>
           <h1>Get started</h1>
