@@ -11,7 +11,7 @@ function App() {
     <>
       <section id="center">
         <div>
-          <h1>this heading is added for version 2</h1>
+          <h1>this heading is added for the continuous deployment Version 1</h1>
         </div>
 
         <div>
